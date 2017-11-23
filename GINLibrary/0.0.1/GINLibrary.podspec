@@ -1,29 +1,40 @@
 
 Pod::Spec.new do |s|
-  s.name             = 'GINLibrary'
-  s.version          = '0.0.1'
-  s.summary          = 'GINS Library.'
+    s.name             = 'GINLibrary'
+    s.version          = '0.0.1'
+    s.summary          = 'GINS Library.'
 
-  s.description      = <<-DESC
-                        GINS Library,all Copyrights are owned by GIN;
+    s.description      = <<-DESC
+                        Copyright © GIN. All rights reserved;
                        DESC
 
-  s.homepage         = 'https://github.com/hehtao/GINLibrary'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'hehtao' => 'hehtao@163.com' }
-  s.source           = { :git => 'https://github.com/hehtao/GINLibrary.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+    s.homepage         = 'https://github.com/hehtao/GINLibrary'
+    # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+    s.license          = { :type => 'MIT', :file => 'LICENSE' }
+    s.author           = { 'hehtao' => 'hehtao@163.com' }
+    s.source           = { :git => 'https://github.com/hehtao/GINLibrary.git', :tag => s.version.to_s }
+    s.social_media_url = 'http://www.detaogroup.com'
+    s.ios.deployment_target = '9.0'
+    s.requires_arc = true
+    s.source_files = 'GINLibrary/Classes/**/*'
+    s.public_header_files = 'GINLibrary/Classes/*.h'
+    s.dependency 'MBProgressHUD', '~> 1.1.0'
+    s.frameworks = 'UIKit'
 
-  s.ios.deployment_target = '8.0'
+    #s.subspec 'GINWipeCache' do |wipeCache|
+    #      wipeCache.source_files = 'GINLibrary/GINWipeCache/**/*'
+    #      wipeCache.public_header_files = 'GINLibrary/GINWipeCache/*.h'
+    #      wipeCache.dependency 'MBProgressHUD', '~> 1.1.0'
+    #      #NetWorkEngine.resource = "Pod/Assets/MLSUIKitResource.bundle"
+    #    end
 
-  s.source_files = 'GINLibrary/Classes/**/*'
-  
+  #s.source_files = 'GINLibrary/Classes/**/*'
+  #s.public_header_files = 'GINLibrary/Classes/**/*.h'
   # s.resource_bundles = {
   #   'GINLibrary' => ['GINLibrary/Assets/*.png']
   # }
 
-  s.public_header_files = 'GINLibrary/Classes/**/*.h'
+
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-end
+
+ end
